@@ -140,7 +140,7 @@ static NSArray<UIColor *> *kGMUBucketBackgroundColors;
     return icon;
   }
 
-  UIFont *font = [UIFont boldSystemFontOfSize:12];
+  UIFont *font = [UIFont boldSystemFontOfSize:20];
   CGSize size = image.size;
   UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
   [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
@@ -151,7 +151,7 @@ static NSArray<UIColor *> *kGMUBucketBackgroundColors;
   NSDictionary *attributes = @{
     NSFontAttributeName : font,
     NSParagraphStyleAttributeName : paragraphStyle,
-    NSForegroundColorAttributeName : [UIColor whiteColor]
+    NSForegroundColorAttributeName : [UIColor blackColor]
   };
   CGSize textSize = [text sizeWithAttributes:attributes];
   CGRect textRect = CGRectInset(rect, (rect.size.width - textSize.width) / 2,
@@ -171,13 +171,13 @@ static NSArray<UIColor *> *kGMUBucketBackgroundColors;
     return icon;
   }
 
-  UIFont *font = [UIFont boldSystemFontOfSize:14];
+  UIFont *font = [UIFont boldSystemFontOfSize:20];
   NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
   paragraphStyle.alignment = NSTextAlignmentCenter;
   NSDictionary *attributes = @{
     NSFontAttributeName : font,
     NSParagraphStyleAttributeName : paragraphStyle,
-    NSForegroundColorAttributeName : [UIColor whiteColor]
+    NSForegroundColorAttributeName : [UIColor blackColor]
   };
   CGSize textSize = [text sizeWithAttributes:attributes];
 
